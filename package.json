@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
-    "client": "cd client && npm start",
-    "heroku-prebuild": "npm install --dev"
+    "client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vinyldude8896/contact-card.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -25,8 +26,8 @@
   "dependencies": {
     "concurrently": "^7.3.0"
   },
-  "devDependencies": {
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
-  }
+  "engines": {
+    "node": "16.15.1"
+  },
+  "heroku-prebuild": "npm install --dev"
 }
