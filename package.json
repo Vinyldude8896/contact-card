@@ -1,0 +1,32 @@
+{
+  "name": "contact-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinyldude8896/contact-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinyldude8896/contact-card/issues"
+  },
+  "homepage": "https://github.com/Vinyldude8896/contact-card#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
