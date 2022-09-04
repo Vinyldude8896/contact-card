@@ -15,7 +15,7 @@ import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
 
 // import initDb, getDb, and PostDB function
-import { initDb, getDb, postDb, deleteDb } from './database';
+import { initDb, getDb, editDb, postDb, deleteDb } from './database';
 
 import { fetchCards } from './cards';
 
@@ -54,6 +54,13 @@ let profile = document.querySelector('input[type="radio"]:checked').value;
 if (submitBtnToUpdate == false) {
   postDb(name, email, phone, profile);
 } else {
+  // Obtains values passed into the form element
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let email = document.getElementById("email").value;
+let profile = document.querySelector('input[type="radio"]:checked').value;
+// Calls the editDB function passing in any values from the form element as well as the ID of the contact that we are updating
+editDb(profileId, name, email, phone, profile);
 
   fetchCards();
     // Toggles the submit button back to POST functionality
@@ -99,4 +106,9 @@ window.editCard = (e) => {
 
   // Toggles the Submit button so that it now Updates an existing contact instead of posting a new one
     submitBtnToUpdate = true;
+
+      // Delete the card
+  editDb(profileId);
+  // Reload the DOM
+  fetchCards();
 };
