@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/Vinyldude8896/contact-card#readme",
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.0",
     "concurrently": "^7.3.0"
   },
   "engines": {
