@@ -14,6 +14,7 @@ import Logo from "../images/logo.png";
 import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
 
+
 // import initDb, getDb, and PostDB function
 import { initDb, getDb, editDb, postDb, deleteDb } from './database';
 
@@ -88,7 +89,7 @@ window.editCard = (e) => {
   // Grabs the id from the button element attached to the contact card and sets a global variable that will be used in the form element.
   profileId = parseInt(e.dataset.id);
 
-  // // Grabs information to pre-populate edit form
+  // Grabs information to pre-populate edit form
   // let editName = e.dataset.name;
   // let editEmail = e.dataset.email;
   // let editPhone = e.dataset.phone;
@@ -112,3 +113,9 @@ window.editCard = (e) => {
   // Reload the DOM
   fetchCards();
 };
+
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+  navigator.serviceWorker.register('./service-worker.js');
+})};
