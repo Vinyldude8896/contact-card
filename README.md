@@ -1,8 +1,12 @@
 # contact-card
 
-### This project is a deployed app which you can use to keep track of your contacts.
+### User Story
+ As a user I would like an app that will keep track of my contacts in a list of cards. I would like to be able to view all of those contacts on the main page when it is loaded. As a user I should be able to edit or delete my contact cards, or create new ones. 
 
-### This app will allow you to save contacts, view, edit and delete them and also create new ones.
+### Features 
+This app will allow you to view all your saved contacts as cards on a webpage when you load it.
+This app will allow you to create a new contact by using the "create New Contact button"
+This app will allow you to edit or delete existing cards on the page.
 
 ### badges
 ![Node.js](https://img.shields.io/badge/Nodejs-License-blue)
@@ -34,7 +38,13 @@ go to this address in your browser : http://localhost:3001/
 ### Contribution Guidelines
 N/A as of yet
 ### Testing
-To test this application try adding, editing and deleting contact cards
+1. you can use the live deployed app: https://contactcardapp.herokuapp.com/
+Or
+1. You can clone the repo here: https://github.com/Vinyldude8896/contact-card
+2. Then install dependancies using npm install.
+3. Navigate to the following address in your browser: http://localhost:3001/
+4. Try creating a new contact
+5. try editing and deleting contacts.
 ### Questions
     email address : kevinnivek@me.com
     - additional instructions 
